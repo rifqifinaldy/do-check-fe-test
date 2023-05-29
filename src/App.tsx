@@ -3,7 +3,7 @@ import { AppRoutes } from "./Routes/App.Routes";
 
 function App() {
   const Routing = useRoutes(AppRoutes);
-  return <main>{Routing}</main>;
+  return Routing;
 }
 
 export default App;

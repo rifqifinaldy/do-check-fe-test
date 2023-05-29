@@ -1,0 +1,40 @@
+@import "../../Themes//theme.colors.scss";
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.no-record-row {
+  padding: 100px;
+  text-align: center;
+}
+
+.table-title {
+  color: $dark;
+  font-size: 18px;
+}
+
+td,
+th {
+  border: 1px solid $light;
+  text-align: center;
+  padding: 6px 20px;
+}
+
+tr th {
+  border: 1px solid $light;
+  text-align: center;
+  padding: 6px 20px;
+  background-color: $blue;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: $light;
+}
+
+tr:hover {
+  background-color: $gray;
+}

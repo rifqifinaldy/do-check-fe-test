@@ -1,16 +1,15 @@
+import styles from "./styles.module.scss";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
-import Navbar from "../Components/Navbar";
 
 const DefaultLayout = () => {
   return (
-    <>
+    <div className={styles["layout"]}>
       <Sidebar />
-      <Navbar />
-      <main>
+      <main className={styles["content"]}>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 };
 

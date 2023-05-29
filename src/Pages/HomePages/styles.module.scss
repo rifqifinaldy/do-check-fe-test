@@ -1,0 +1,7 @@
+@import "../../Themes/theme.colors.scss";
+
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}

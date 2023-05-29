@@ -1,0 +1,19 @@
+@import "../../Themes/theme.colors.scss";
+
+.page-header {
+  border-bottom: 1px solid $light;
+  padding-bottom: 20px;
+  margin-bottom: 14px;
+}
+
+.welcome-heading {
+  font-size: 32px;
+  text-align: center;
+  color: $green;
+}
+
+.welcome-subheading {
+  font-size: 14px;
+  text-align: center;
+  color: $gray;
+}
