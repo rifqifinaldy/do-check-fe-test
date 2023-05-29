@@ -1,7 +1,7 @@
 import PageHeader from "../../Components/Page-Header";
 import Table, { ITableColumns } from "../../Components/Table";
 import { IPagesProps } from "../../Routes/App.Routes";
-import { IPassenger } from "../../Types-Const/passenger.type";
+import { IPassenger } from "../../Types/passenger.type";
 
 const FirstQuestion: React.FC<IPagesProps> = ({ headers }) => {
   const passenger: IPassenger[] = [
@@ -40,7 +40,8 @@ const FirstQuestion: React.FC<IPagesProps> = ({ headers }) => {
   return (
     <>
       <PageHeader heading={headers.title} subheading={headers.subtitle} />
-      <Table title="List of Passenger" datas={passenger} columns={columns} />
+      <h2>Passenger List</h2>
+      <Table datas={passenger} columns={columns} />
     </>
   );
 };
