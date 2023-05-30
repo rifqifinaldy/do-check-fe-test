@@ -1,0 +1,11 @@
+@import "../../Themes/theme.colors.scss";
+
+.to-do-container {
+  padding: 0 2em 2em 2em;
+  border: 1px dotted $gray;
+  background-color: $light;
+  margin-top: 1em;
+  @media screen and (max-width: 540px) {
+    padding: 0.5em;
+  }
+}

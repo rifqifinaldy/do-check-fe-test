@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { useContext } from "react";
-import { itemContext } from "../../Context/item.context";
+import { itemContext } from "../../Context/ItemContext/item.context";
 import { toDollar } from "../../Helpers/currency";
 import { numeric } from "../../Helpers/numbering";
 

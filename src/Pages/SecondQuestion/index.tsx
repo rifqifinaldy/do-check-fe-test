@@ -1,6 +1,6 @@
 import Items from "../../Components/List";
 import PageHeader from "../../Components/Page-Header";
-import ItemProvider from "../../Context/item.context";
+import ItemProvider from "../../Context/ItemContext/item.context";
 import { IPagesProps } from "../../Routes/App.Routes";
 import { Iitem } from "../../Types/item.type";
 

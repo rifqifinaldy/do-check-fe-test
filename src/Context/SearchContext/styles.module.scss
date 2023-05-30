@@ -1,0 +1,9 @@
+@import "../../Themes/theme.colors.scss";
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted $gray;
+  margin-bottom: 1em;
+}

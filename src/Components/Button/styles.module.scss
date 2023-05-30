@@ -1,0 +1,37 @@
+@import "../../Themes/theme.colors.scss";
+
+@mixin button {
+  padding: 1em;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $light;
+  transition: 0.2s ease-in;
+  box-shadow: 1px 1px rgba($color: $gray, $alpha: 0.75);
+  &:hover {
+    opacity: 0.75;
+    box-shadow: none;
+  }
+  &:disabled {
+    background-color: $gray;
+    cursor: not-allowed;
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  @include button();
+  background-color: $blue;
+}
+
+.btn-secondary {
+  @include button();
+  background-color: $red;
+}

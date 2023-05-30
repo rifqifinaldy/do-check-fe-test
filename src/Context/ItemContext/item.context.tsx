@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Iitem } from "../Types/item.type";
+import { Iitem } from "../../Types/item.type";
 
 export const itemContext = createContext<Iitem[] | undefined>(undefined);
 

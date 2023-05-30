@@ -9,6 +9,7 @@ const Sidebar: React.FC = () => {
         <h1 className={styles["app-title"]}>Do-Check</h1>
         <h6 className={styles["app-subtitle"]}>FE Test Rifqi Finaldy</h6>
       </div>
+      {/* Dekstop Sidebar */}
       <div className={styles["sidebar-menus"]}>
         {menus.map((menu) => {
           return (

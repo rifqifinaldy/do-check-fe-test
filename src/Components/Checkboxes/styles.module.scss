@@ -1,0 +1,58 @@
+@import "../../Themes/theme.colors.scss";
+
+.checkboxes-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: $light;
+  height: auto;
+  font-weight: 300;
+  overflow: hidden;
+  inline-size: min-content;
+  span {
+    display: block;
+  }
+}
+
+.checkboxes-field {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: transparent;
+  font: inherit;
+  color: $blue;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.1em solid $light;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  margin-right: 1.5em;
+}
+
+.checkboxes-field::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em $light;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}

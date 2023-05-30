@@ -1,0 +1,64 @@
+@import "../../Themes/theme.colors.scss";
+
+@mixin todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  transition: 0.35s ease-out;
+  @media screen and (max-width: 540px) {
+    padding: 8px;
+    position: relative;
+  }
+}
+
+.todo-completed {
+  @include todo-item();
+  background-color: $dark-green;
+}
+
+.todo-incompleted {
+  @include todo-item();
+  background-color: $gray;
+}
+
+.todo-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1em;
+  @media screen and (max-width: 540px) {
+    padding: 0;
+    position: absolute;
+    top: -11px;
+    right: 0;
+  }
+}
+
+@mixin icon($color) {
+  background-color: $light;
+  color: $color;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.75;
+  }
+  @media screen and (max-width: 540px) {
+    background-color: $light;
+    border: none;
+  }
+}
+
+.edit-icon {
+  @include icon($blue);
+  margin-right: 1em;
+}
+
+.delete-icon {
+  @include icon($red);
+}

@@ -1,15 +1,43 @@
+import { ChangeEvent } from "react";
+import styles from "./styles.module.scss";
+
 interface IInputProps {
   label: string;
   type: "text" | "number" | "date";
-  required: boolean;
-  value: string;
+  id?: string;
+  required?: boolean;
+  value?: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  maxLength?: number;
+  minLength?: number;
 }
 
-const Input: React.FC<IInputProps> = ({ label, type, required, value }) => {
+const Input: React.FC<IInputProps> = ({
+  id,
+  label,
+  type,
+  required,
+  value,
+  onChange,
+  maxLength,
+  minLength,
+}) => {
   return (
-    <div>
-      <label>{label}</label>
-      <input value={value} type={type} required={required} />
+    <div className={styles["input-group"]}>
+      <input
+        onChange={onChange}
+        id={id}
+        className={styles["input-field"]}
+        value={value}
+        type={type}
+        required={required}
+        placeholder=" "
+        maxLength={maxLength}
+        minLength={minLength}
+      />
+      <label htmlFor={id} className={styles["input-label"]}>
+        {label}
+      </label>
     </div>
   );
 };

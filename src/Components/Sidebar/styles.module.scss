@@ -7,6 +7,22 @@
   height: 100vh;
   min-width: 300px;
   box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  @media screen and (max-width: 1024px) {
+    min-width: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (max-width: 540px) {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
 }
 
 // Sidebar App Logos & Title
@@ -15,6 +31,18 @@
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid $light;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    width: 200px;
+    border-bottom: none;
+  }
+  @media screen and (max-width: 540px) {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $light;
+    background-color: $green;
+  }
 }
 
 .app-title {
@@ -34,6 +62,15 @@
 .sidebar-menus {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    justify-content: space-around;
+    background-color: $yellow;
+    margin: 0;
+  }
 }
 
 // --- Sidebar Items
@@ -43,6 +80,11 @@
   border-bottom: 1px solid $gray;
   text-decoration: none;
   transition: 0.1s ease-in;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: none;
+  }
 }
 
 .active-menu {
