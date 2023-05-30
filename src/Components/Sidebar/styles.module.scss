@@ -90,6 +90,8 @@
 .active-menu {
   @include sidebar-items();
   color: $blue;
+  background-color: $light;
+  border-right: 5px solid $gray;
 }
 
 .inactive-menu {

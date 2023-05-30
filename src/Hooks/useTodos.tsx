@@ -24,7 +24,7 @@ const useTodos = () => {
       isCompleted: false,
     });
     dispatch(
-      addTodo({ task: todo.task, id: Math.random(), isCompleted: false })
+      addTodo({ task: todo.task, id: Math.random().toString(), isCompleted: false })
     );
   };
 
